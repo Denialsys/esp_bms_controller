@@ -121,7 +121,7 @@ body {
   padding: 6px 8px;
   background: transparent;
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .cell-number,
@@ -130,60 +130,14 @@ body {
   font-weight: 600;
 }
 
-.cell-voltage,
-.resistance-value {
-  font-size: 14px;
+.cell-value {
   margin: 0;
-}
-
-.resistances-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2px;
-}
-
-.resistance-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 8px;
-  background: transparent;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  font-size: 14px;
-}
-
-.resistance-label {
-  color: #27d96b;
-  font-weight: 600;
-}
-
-.resistance-value {
-  font-size: 16px;
-  margin-top: 5px;
 }
 
 .temperatures-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
-}
-
-.temp-item {
-  background: #444;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.temp-label {
-  color: #27d96b;
-  font-weight: bold;
-}
-
-.temp-value {
-  font-size: 16px;
-  margin-top: 5px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
 }
 
 .button-row {
