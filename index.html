@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JK-BMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="title">JK-BMS</div>
+  <div id="status" class="status online">ONLINE</div>
+</div>
+
+<div class="container">
+
+  <div class="card main-card">
+    <div class="main-info">
+      <div class="big-soc" id="bigSoc">78%</div>
+      <div class="sub">SOC</div>
+    </div>
+
+    <div class="main-grid">
+      <div class="info-item">
+        <div class="label">Battery Voltage</div>
+        <div class="value" id="packVoltage">52.4V</div>
+      </div>
+
+      <div class="info-item">
+        <div class="label">Current</div>
+        <div class="value" id="packCurrent">-12.4A</div>
+      </div>
+
+      <div class="info-item">
+        <div class="label">Power</div>
+        <div class="value" id="power">650W</div>
+      </div>
+
+      <div class="info-item">
+        <div class="label">Temperature</div>
+        <div class="value" id="temp">31°C</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Cell Voltages</div>
+    <div id="cells" class="cells-grid"></div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Wire Resistances</div>
+    <div id="resistances" class="cells-grid"></div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Battery Temperatures</div>
+    <div id="temperatures" class="temperatures-grid"></div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Controls</div>
+    <div class="button-row">
+      <button onclick="toggleCharge()">Charge MOS</button>
+      <button onclick="toggleDischarge()">Discharge MOS</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
