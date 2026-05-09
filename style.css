@@ -49,8 +49,8 @@ body {
 .card {
   background: #2d2d2d;
   border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
@@ -61,11 +61,11 @@ body {
 }
 
 .main-info {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .big-soc {
-  font-size: 64px;
+  font-size: 32px;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -79,8 +79,9 @@ body {
 
 .main-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
 }
 
 .info-item {
@@ -94,13 +95,13 @@ body {
 }
 
 .value {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 5px;
   font-weight: bold;
 }
 
 .section-title {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 15px;
   color: #27d96b;
   font-weight: bold;
@@ -108,45 +109,52 @@ body {
 
 .cells-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 5px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
 }
 
 .cell-item {
-  background: #444;
-  padding: 5px;
-  border-radius: 3px;
-  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   font-size: 14px;
 }
 
-.cell-number {
+.cell-number,
+.resistance-label {
   color: #27d96b;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-.cell-voltage {
-  font-size: 16px;
-  margin-top: 5px;
+.cell-voltage,
+.resistance-value {
+  font-size: 14px;
+  margin: 0;
 }
 
 .resistances-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
 }
 
 .resistance-item {
-  background: #444;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   font-size: 14px;
 }
 
 .resistance-label {
   color: #27d96b;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .resistance-value {

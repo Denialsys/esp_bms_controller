@@ -5,7 +5,6 @@ const sampleData = {
   current: -12.4,
   soc: 78,
   power: 650,
-  temp: 31,
   cells: [
     3.28, 3.27, 3.29, 3.28,
     3.27, 3.28, 3.29, 3.27,
@@ -28,7 +27,6 @@ function render(data) {
   document.getElementById("packVoltage").innerText = data.voltage + "V";
   document.getElementById("packCurrent").innerText = data.current + "A";
   document.getElementById("power").innerText = data.power + "W";
-  document.getElementById("temp").innerText = data.temp + "°C";
 
   const cellsContainer = document.getElementById("cells");
   cellsContainer.innerHTML = "";
@@ -43,7 +41,7 @@ function render(data) {
 
       cellsContainer.innerHTML += `
         <div class="cell-item">
-          <div class="cell-number">Cell ${index + 1}</div>
+          <div class="cell-number">${index + 1} -</div>
           <div class="cell-voltage">${voltage.toFixed(3)}V</div>
         </div>
       `;
@@ -59,9 +57,9 @@ function render(data) {
       const resistance = data.resistances[index];
 
       resistancesContainer.innerHTML += `
-        <div class="cell-item">
-          <div class="cell-number">Cell ${index + 1}</div>
-          <div class="cell-voltage">${resistance.toFixed(3)}Ω</div>
+        <div class="resistance-item">
+          <div class="resistance-label">${index + 1} -</div>
+          <div class="resistance-value">${resistance.toFixed(3)}Ω</div>
         </div>
       `;
     }
